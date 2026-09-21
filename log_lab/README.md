@@ -1,57 +1,53 @@
-# F26 Log Lab — Northline Portal Incident
+# CCIG — Log Lab (Northline Portal)
 
-**Artifacts-only lab** (no Salt / VMs required). Works on Kali, any Linux analysis box, or Windows with Wireshark + a grep tool.
+CTF CIG (**CCIG**) artifacts-only lab: web/auth/Windows logs plus a cleartext HTTP pcap.
 
-This lab is **original** for the log-analysis track. It is **not** the teammate NTA/TLS challenge (`reference_nta_tls/`).
-
-| This lab | Teammate NTA lab |
-|----------|------------------|
-| Cleartext **HTTP** + **log files** | Encrypted **TLS** + SSL key log |
-| `grep` / `awk` / `cut` / `sort` on logs | Wireshark TLS decrypt + Follow stream |
-| Correlate IP from **access.log** → **HTTP pcap** | Correlate via TLS Client Hello / SNI |
+This is **not** the TLS/NTA challenge in `../nta_tls/` (or `reference_nta_tls` in other checkouts).
 
 ---
 
-## Story
+## How to do the lab
 
-Overnight, someone probed **portal.northline.lab**. You have:
+1. Open **[CHALLENGES.md](CHALLENGES.md)** and follow Parts A–E in order.
+2. Go into the evidence folder:
 
-| File | Description |
-|------|-------------|
-| `artifacts/access.log` | Nginx-style web access log |
-| `artifacts/auth.log` | Linux SSH / sudo auth log |
-| `artifacts/windows_security.csv` | Windows Security events (CSV export) |
-| `artifacts/http_login.pcap` | Packet capture of cleartext HTTP to the portal |
-| `artifacts/triage-note.txt` | Short SOC note (also “found” via the web log) |
+   ```bash
+   cd artifacts
+   ```
+
+3. **Logs (Parts A–C)** — filter with CLI tools:
+
+   ```bash
+   grep -i requests access.log
+   grep -c '203.0.113.77' access.log
+   grep -iE 'union|passwd|\.\.' access.log
+   grep Failed auth.log
+   grep 4625 windows_security.csv
+   ```
+
+4. **Packets (Part D)** — open `http_login.pcap` in Wireshark:
+   - Filter: attacker IP and `tcp.port == 80`
+   - **Follow → HTTP Stream**
+   - Find the successful login password (not stored in `access.log`)
+
+5. Turn in answers the way your CCIG instructor asks.
 
 ---
 
-## Skills covered
+## Files in `artifacts/`
 
-1. Web access log triage (SQLi, traversal, brute force, status codes, user-agents)
-2. Linux `auth.log` review
-3. Windows failed logon review (account **Kestrel**)
-4. CLI filtering: `grep`, `awk`, `cut`, `sort`, `uniq`
-5. Log → packet correlation in Wireshark (**Follow → HTTP Stream**) to recover a **plaintext password**
+| File | Role |
+|------|------|
+| `access.log` | Nginx-style web access log |
+| `auth.log` | Linux SSH / sudo log |
+| `windows_security.csv` | Windows Security export |
+| `http_login.pcap` | Cleartext HTTP capture |
+| `triage-note.txt` | Short SOC note / flags |
 
 ---
 
-## How to start
+## Rebuild artifacts (optional)
 
 ```bash
-cd F26_log_lab
-# artifacts already generated; to rebuild:
 python3 generate_lab.py
 ```
-
-Open challenges: [CHALLENGES.md](CHALLENGES.md)
-
-Mentors: [ANSWER_KEY.txt](ANSWER_KEY.txt) — **do not give to students**.  
-Before handing out a zip, delete `artifacts/LAB_FACTS.txt` if present.
-
----
-
-## Suggested tools
-
-- Terminal: `grep`, `awk`, `cut`, `sort`, `uniq`, `wc`
-- Wireshark or `tshark` for `http_login.pcap`
