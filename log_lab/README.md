@@ -1,9 +1,6 @@
 # CCIG — Log Lab (Northline Portal)
 
 CTF CIG (**CCIG**) artifacts-only lab: web/auth/Windows logs plus a cleartext HTTP pcap.
-
-This is **not** the TLS/NTA challenge in `../nta_tls/` (or `reference_nta_tls` in other checkouts).
-
 ---
 
 ## How to do the lab
