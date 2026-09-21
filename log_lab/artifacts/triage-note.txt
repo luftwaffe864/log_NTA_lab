@@ -1,0 +1,3 @@
+Northline SOC scratch note
+FLAG{northline_access_log_triage}
+Correlate web IP with pcap → FLAG{log_to_pcap_correlation}

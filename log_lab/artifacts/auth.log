@@ -1,0 +1,8 @@
+Sep 18 02:14:00 portal sshd[2201]: Accepted publickey for deploy from 198.51.100.10 port 51122 ssh2
+Sep 18 02:27:20 portal sshd[3100]: Failed password for root from 203.0.113.77 port 40000 ssh2
+Sep 18 02:27:24 portal sshd[3100]: Failed password for admin from 203.0.113.77 port 40001 ssh2
+Sep 18 02:27:28 portal sshd[3100]: Failed password for ubuntu from 203.0.113.77 port 40002 ssh2
+Sep 18 02:27:32 portal sshd[3100]: Failed password for deploy from 203.0.113.77 port 40003 ssh2
+Sep 18 02:27:36 portal sshd[3100]: Failed password for j.hale from 203.0.113.77 port 40004 ssh2
+Sep 18 02:28:20 portal sshd[3100]: Failed password for invalid user kestrel from 203.0.113.77 port 40110 ssh2
+Sep 18 02:29:00 portal sudo: j.hale : TTY=pts/0 ; PWD=/home/j.hale ; USER=root ; COMMAND=/usr/bin/less /var/log/nginx/access.log

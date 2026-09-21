@@ -1,0 +1,25 @@
+TimeGenerated,EventId,AccountName,IpAddress,LogonType,Status,Message
+2026-09-18 02:14:00,4624,SYSTEM,-,5,0x0,An account was successfully logged on
+2026-09-18 02:15:00,4624,SYSTEM,-,5,0x0,An account was successfully logged on
+2026-09-18 02:16:00,4624,SYSTEM,-,5,0x0,An account was successfully logged on
+2026-09-18 02:17:00,4624,SYSTEM,-,5,0x0,An account was successfully logged on
+2026-09-18 02:18:00,4624,SYSTEM,-,5,0x0,An account was successfully logged on
+2026-09-18 02:19:00,4624,SYSTEM,-,5,0x0,An account was successfully logged on
+2026-09-18 02:20:00,4624,SYSTEM,-,5,0x0,An account was successfully logged on
+2026-09-18 02:21:00,4624,SYSTEM,-,5,0x0,An account was successfully logged on
+2026-09-18 02:22:00,4624,SYSTEM,-,5,0x0,An account was successfully logged on
+2026-09-18 02:23:00,4624,SYSTEM,-,5,0x0,An account was successfully logged on
+2026-09-18 02:24:00,4624,SYSTEM,-,5,0x0,An account was successfully logged on
+2026-09-18 02:25:00,4624,SYSTEM,-,5,0x0,An account was successfully logged on
+2026-09-18 02:26:00,4624,SYSTEM,-,5,0x0,An account was successfully logged on
+2026-09-18 02:27:00,4624,SYSTEM,-,5,0x0,An account was successfully logged on
+2026-09-18 02:28:00,4624,SYSTEM,-,5,0x0,An account was successfully logged on
+2026-09-18 02:27:40,4625,Kestrel,203.0.113.77,3,0xC000006D,An account failed to log on (unknown user or bad password) hint:FLAG{kestrel_failed_logon}
+2026-09-18 02:27:43,4625,Kestrel,203.0.113.77,3,0xC000006D,An account failed to log on (unknown user or bad password) hint:FLAG{kestrel_failed_logon}
+2026-09-18 02:27:46,4625,Kestrel,203.0.113.77,3,0xC000006D,An account failed to log on (unknown user or bad password) hint:FLAG{kestrel_failed_logon}
+2026-09-18 02:27:49,4625,Kestrel,203.0.113.77,3,0xC000006D,An account failed to log on (unknown user or bad password) hint:FLAG{kestrel_failed_logon}
+2026-09-18 02:27:52,4625,Kestrel,203.0.113.77,3,0xC000006D,An account failed to log on (unknown user or bad password) hint:FLAG{kestrel_failed_logon}
+2026-09-18 02:27:55,4625,Kestrel,203.0.113.77,3,0xC000006D,An account failed to log on (unknown user or bad password) hint:FLAG{kestrel_failed_logon}
+2026-09-18 02:27:58,4625,Kestrel,203.0.113.77,3,0xC000006D,An account failed to log on (unknown user or bad password) hint:FLAG{kestrel_failed_logon}
+2026-09-18 02:28:01,4625,Kestrel,203.0.113.77,3,0xC000006D,An account failed to log on (unknown user or bad password) hint:FLAG{kestrel_failed_logon}
+2026-09-18 02:28:10,4625,Administrator,203.0.113.77,3,0xC000006A,An account failed to log on
